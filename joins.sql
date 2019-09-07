@@ -29,8 +29,7 @@ SELECT
 
 --5
 SELECT
-    users.username,
-    posts.created_at
+    users.username
     
     FROM users
 
@@ -61,7 +60,6 @@ SELECT
 
 --8
 SELECT
-comments.*,
 posts.title AS post_title,
 posts.url AS post_url,
 comments.body AS comment_body
@@ -75,7 +73,6 @@ WHERE posts.created_at > '2015-01-01';
 
 --9
 SELECT
-comments.*,
 posts.title AS post_title,
 posts.url AS post_url,
 comments.body AS comment_body
@@ -89,7 +86,7 @@ WHERE posts.created_at < '2015-01-01';
 
 --10
 SELECT
-comments.*, posts.title AS post_title, posts.url AS post_url, comments.body AS comment_body
+posts.title AS post_title, posts.url AS post_url, comments.body AS comment_body
 
 FROM comments
 
